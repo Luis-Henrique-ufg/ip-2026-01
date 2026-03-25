@@ -9,5 +9,4 @@ Repositório com materiais, exercícios e projetos desenvolvidos durante a disci
 Este repositório tem como objetivo reunir conteúdos fundamentais para o aprendizado de programação, incluindo lógica, estruturas de controle e boas práticas de desenvolvimento.
 
 
-💻 Tecnologias Utilizadas
-Linguagem principal: (Golang)
+💻 Linguagem principal: (Golang)
