@@ -11,7 +11,7 @@ func main() {
 	fmt.Println("Digite o número de ingressos vendidos para a categoria popular: ")
 	fmt.Scan(&popular)
 
-	fnt.Println("Digite o número de ingressos vendidos para a categoria geral: ")
+	fmt.Println("Digite o número de ingressos vendidos para a categoria geral: ")
 	fmt.Scan(&geral)
 
 	fmt.Println("Digite o número de ingressos vendidos para a categoria arquibancada: ")
@@ -26,5 +26,5 @@ func main() {
 	cadeiras = cadeiras * 20
 
 	total := popular + geral + arquibancada + cadeiras
-	fmt.Printf("A renda do jogo foi de: %d", total)
+	fmt.Printf("A renda do jogo foi de: %d\n", total)
 }
