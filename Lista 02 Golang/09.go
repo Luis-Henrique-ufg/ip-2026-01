@@ -1,18 +1,3 @@
-//Um comerciante calcula o valor da venda, tendo em vista a tabela a seguir:
-//Valor da Compra
-//Valor < R$ 10,00
-//R$ 10,00 <= Valor < R$ 30,00
-//R$ 30,00 <= Valor < R$ 50,00
-//Valor >= 50,00
-
-//Valor da Venda
-//Lucro de 70%
-//Lucro de 50%
-//Lucro de 40%
-//Lucro de 30%
-
-//Escreva um programa que leia o valor da compra e imprima o valor da venda. Cuidado com valor inválido de compra!
-
 package main
 
 import "fmt"
