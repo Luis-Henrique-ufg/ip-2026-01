@@ -7,11 +7,7 @@ func main() {
 
 	fmt.Println("Digite 10 números inteiros:")
 	for i := 0; i < len(vetor); i++ {
-		_, err := fmt.Scan(&vetor[i])
-		if err != nil {
-			fmt.Println("Erro:", err)
-			return
-		}
+		fmt.Scan(&vetor[i])
 	}
 
 	encontrou := false
