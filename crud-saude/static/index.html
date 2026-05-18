@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistema de Saúde</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- ── CABEÇALHO ─────────────────────────── -->
+    <header>
+        <div class="header-titulo">
+            <span class="icone">🏥</span>
+            <h1>Sistema de Saúde</h1>
+        </div>
+        <nav>
+            <button id="btn-nav-pacientes" class="nav-btn ativo" onclick="mostrarSecao('pacientes')">
+                👤 Pacientes
+            </button>
+            <button id="btn-nav-consultas" class="nav-btn" onclick="mostrarSecao('consultas')">
+                📋 Consultas
+            </button>
+        </nav>
+    </header>
+
+    <main>
+
+        <!-- ── MENSAGEM GLOBAL ───────────────── -->
+        <div id="mensagem" class="mensagem"></div>
+
+        <!-- ════════════════════════════════════ -->
+        <!--          SEÇÃO PACIENTES            -->
+        <!-- ════════════════════════════════════ -->
+        <section id="secao-pacientes">
+            <h2>👤 Pacientes</h2>
+
+            <!-- Formulário de cadastro -->
+            <div class="card">
+                <h3 id="titulo-form-paciente">Cadastrar Paciente</h3>
+                <form id="form-paciente">
+                    <input type="text" id="nome" placeholder="Nome completo *" required>
+                    <input type="number" id="idade" placeholder="Idade *" min="1" max="150" required>
+                    <input type="text" id="cpf" placeholder="CPF (ex: 111.222.333-44) *" required>
+                    <input type="text" id="diagnostico" placeholder="Diagnóstico (opcional)">
+                    <button type="submit" id="btn-submit-paciente">
+                        ➕ Cadastrar
+                    </button>
+                    <button type="button" id="btn-cancelar" onclick="cancelarEdicao()">
+                        ✖ Cancelar Edição
+                    </button>
+                </form>
+            </div>
+
+            <!-- Tabela de pacientes -->
+            <div class="card">
+                <div class="card-header">
+                    <h3>Lista de Pacientes</h3>
+                    <button class="btn-atualizar" onclick="carregarPacientes()">
+                        🔄 Atualizar
+                    </button>
+                </div>
+                <div id="lista-pacientes">
+                    <p class="carregando">Carregando...</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- ════════════════════════════════════ -->
+        <!--          SEÇÃO CONSULTAS            -->
+        <!-- ════════════════════════════════════ -->
+        <section id="secao-consultas" class="escondido">
+            <h2>📋 Consultas</h2>
+
+            <!-- Formulário de consulta -->
+            <div class="card">
+                <h3>Agendar Consulta</h3>
+                <form id="form-consulta">
+                    <select id="select-paciente" required>
+                        <option value="">Selecione um paciente *</option>
+                    </select>
+                    <input type="date" id="data" required>
+                    <input type="text" id="medico" placeholder="Nome do médico *" required>
+                    <textarea id="observacoes" placeholder="Observações (opcional)" rows="2"></textarea>
+                    <button type="submit">
+                        ➕ Agendar Consulta
+                    </button>
+                </form>
+            </div>
+
+            <!-- Tabela de consultas -->
+            <div class="card">
+                <div class="card-header">
+                    <h3>Lista de Consultas</h3>
+                    <button class="btn-atualizar" onclick="carregarConsultas()">
+                        🔄 Atualizar
+                    </button>
+                </div>
+                <div id="lista-consultas">
+                    <p class="carregando">Carregando...</p>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>Sistema de Saúde — CRUD em Go | 2024</p>
+    </footer>
+
+    <script src="app.js"></script>
+</body>
+
+</html>
